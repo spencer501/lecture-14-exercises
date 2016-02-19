@@ -4,18 +4,7 @@ library(dplyr)
 
 # Build a map
 build_map <- function(data) {
-   # Dealing with the `Shots Fired` column
-   # Creating a new Numeric variable with no space in the name
-   # Replacing NA values with the mean (that makes sense, right?)
-   data$shots_fired <- as.numeric(data[, 'Shots Fired'])
-   data <- data %>%
-      mutate(shots_fired = ifelse(
-         is.na(shots_fired),
-         mean(shots_fired, na.rm = T),
-         shots_fired
-      ))
-   
-   #### From here down, you should make changes ####
+
    # Create a bubble map of the data
    g <- list(
       scope = 'usa',
