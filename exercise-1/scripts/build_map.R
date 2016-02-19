@@ -1,5 +1,8 @@
-# Build a map
+#Needed libraries
+library(plotly)
+library(dplyr)
 
+# Build a map
 build_map <- function(data) {
    # Dealing with the `Shots Fired` column
    # Creating a new Numeric variable with no space in the name
